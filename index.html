@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/index.css">
+    <title>Excel to JSON</title>
+  </head>
+  <body class="h-fit flex flex-col justify-center items-center bg-gray-100">
+    <div class="space-y-8 w-full flex flex-col justify-center items-center mt-16 mb-16">
+      <h1 class="mt-2 text-3xl font-bold tracking-tight leading-7 text-indigo-600 sm:text-4xl">Excel to JSON Convertor</h1>
+      <div class="col-span-full">
+        <div class="mt-2 flex justify-center rounded-lg border-2 border-dashed border-gray-900/25 px-6 py-10">
+          <div class="text-center">
+            <svg class="mx-auto h-12 w-12 text-gray-300" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill="none" stroke="#CBD5E0" stroke-linecap="round" stroke-linejoin="round" d="M13.5.5.5 3v18l13 2.5zM13.5 3.5h10v17h-10"></path><path fill="none" stroke="#CBD5E0" stroke-linecap="round" stroke-linejoin="round" d="M13.5 5.5h3v1h-3zM18.5 5.5h3v1h-3zM13.5 8.5h3v1h-3zM18.5 8.5h3v1h-3zM13.5 11.5h3v1h-3zM18.5 11.5h3v1h-3zM13.5 14.5h3v1h-3zM18.5 14.5h3v1h-3zM13.5 17.5h3v1h-3zM18.5 17.5h3v1h-3zM4.5 8.5l4 8M4.5 16.5l4-8"></path>
+            </svg>
+            <div class="mt-4 flex text-sm leading-6 text-gray-600">
+              <label for="file-upload" class="relative cursor-pointer rounded-md bg-transparent font-semibold text-indigo-600 focus-within:outline-none hover:text-indigo-500">
+                <span class="bg-transparent">Upload a file</span>
+                <input type="file" id="file-upload" name="file-upload" class="sr-only" />
+              </label>
+              <p class="pl-1">or drag and drop</p>
+            </div>
+            <p class="text-xs leading-5 text-gray-600">XLSX file up to 10MB</p>
+          </div>
+        </div>
+      </div>
+      <div id="selected-file" class="hidden bg-black rounded-lg shadow-lg px-3 py-3">
+        <div class="flex items-center text-white">
+          <svg class="h-6 w-6 text-green-100 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <circle cx="12" cy="12" r="10" class="fill-current text-green-500" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4" />
+          </svg>          
+          <span id="file-name" class="font-medium text-white"></span>&nbsp; selected.
+        </div>
+      </div>
+      <button class="bg-indigo-500 hover:bg-indigo-700 font-bold text-white rounded-md px-4 py-2" id="convertBtn">Convert to JSON</button>
+      <div id="loading" class="hidden fixed inset-x-0 top-0 items-center justify-center px-4 py-2 pointer-events-none">
+        <div class="bg-black rounded-lg shadow-lg flex items-center p-3">
+          <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-indigo-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>          
+          <span class="text-white font-bold">Converting...</span>
+        </div>
+      </div>      
+      <pre class="hidden w-full h-[520px] px-4 py-4 rounded-lg bg-slate-300 overflow-y-scroll max-w-xl scroll-m-1" id="output"></pre>
+      <a id="downloadBtn" download="data.json" href="#" style="display:none" class="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded inline-block">Download JSON</a> 
+      <script type="module" src="/src/index.js"></script>
+    </div>
+    <footer class="w-full flex flex-col justify-center items-center space-y-2 bg-gray-200 py-4">
+      <div class="font-bold">
+        DESIGN AND CODE BY
+        <a href="https://uixaadi.netlify.app/" target="_blank" class="text-indigo-500">AADITYA</a>
+      </div>
+      <div class="text-gray-600 text-lg">
+        © 2023 Excel to JSON Converter
+      </div>
+    </footer>   
+  </body>
+</html>
