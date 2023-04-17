@@ -92,13 +92,15 @@
 
         // Read the file as a binary string
         const reader = new FileReader();
-        reader.readAsBinaryString(file);
+        reader.readAsArrayBuffer(file);
+        // reader.readAsBinaryString(file);
 
         reader.onload = function(e) {
           const data = e.target.result;
 
           // Convert the binary string to a workbook object
-          const workbook = XLSX.read(data, { type: 'binary' });
+          // const workbook = XLSX.read(data, { type: 'binary' });
+          const workbook = XLSX.read(data, { type: 'array' });
 
           // Get the first worksheet from the workbook
           const worksheet = workbook.Sheets[workbook.SheetNames[0]];
