@@ -1,5 +1,3 @@
-import XLSX from 'xlsx';
-
 const fileInput = document.getElementById('file-upload');
 const convertBtn = document.getElementById('convertBtn');
 const output = document.getElementById('output');
