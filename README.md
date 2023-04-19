@@ -41,6 +41,10 @@ Contributions to this project are welcome. To contribute:
 4. Push your changes to your fork.
 5. Submit a pull request to this repository.
 
+## License
+
+This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for more information.
+
 ## Credits
 
-This project was created by [UIX.AADI](https://uixaadi.netlify.app/). 
+This project was created by [UIX.AADI](https://uixaadi.netlify.app/).
