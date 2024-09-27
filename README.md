@@ -47,4 +47,4 @@ This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE
 
 ## Credits
 
-This project was created by [UIX.AADI](https://uixaadi.netlify.app/).
+This project was created by [codebyaadi](https://codebyaadi.netlify.app/).
